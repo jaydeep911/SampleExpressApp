@@ -7,7 +7,7 @@ pipeline {
         EC2_HOST = '54.183.58.97'  // Replace with your EC2 Public IP or DNS
         SSH_KEY_CREDENTIALS = 'gitsshkey'  // Jenkins SSH credentials ID
         REPO_URL = 'git@github.com:jaydeep911/SampleExpressApp.git'  // Your Git repository URL
-        APP_DIR = '/var/www/html'  // Path to deploy the app on EC2
+        APP_DIR = '/home/ubuntu/app'  // Path to deploy the app on EC2
     }
 
     stages {
