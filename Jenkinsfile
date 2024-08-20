@@ -25,14 +25,6 @@ pipeline {
             }
         }
 
-       
-        stage('Package') {
-            steps {
-                // Package the application (optional)
-                sh 'npm run build'
-            }
-        }
-
         stage('Deploy to EC2') {
             steps {
                 script {
