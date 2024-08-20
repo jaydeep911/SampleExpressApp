@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     // Use SSH to deploy the application to EC2
-                    sshagent(credentials: ['${SSH_KEY_CREDENTIALS}']) {
+                    sshagent(credentials: ["${SSH_KEY_CREDENTIALS}"]) {
                         sh """
                         ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_HOST} << 'EOF'
                         # Stop any existing Node.js process
