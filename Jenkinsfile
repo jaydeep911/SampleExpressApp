@@ -8,6 +8,8 @@ pipeline {
         SSH_KEY_CREDENTIALS = 'SSH-Node'  // Jenkins SSH credentials ID
         REPO_URL = 'https://github.com/jaydeep911/SampleExpressApp.git'  // Your Git repository URL
         APP_DIR = '/home/ubuntu/app'  // Path to deploy the app on EC2
+        APP_NAME = 'NodeTestApp'    // Name for your app in pm2
+
     }
 
     stages {
@@ -47,8 +49,9 @@ EOF
                         # Navigate to the app directory
                         cd ${APP_DIR}
                         # Install dependencies and start the application
-                        npm install
-                        
+                        pm2 stop ${APP_NAME} || true  # Stop the app if it's running
+                        pm2 start npm --name "${APP_NAME}" -- start  # Start the app with pm2
+                        pm2 save  # Save the pm2 process list
                         exit
 EOF
                         """
