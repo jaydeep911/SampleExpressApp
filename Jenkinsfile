@@ -5,7 +5,7 @@ pipeline {
         // Define environment variables
         EC2_USER = 'ubuntu'  // Default Ubuntu username for EC2
         EC2_HOST = '54.183.58.97'  // Replace with your EC2 Public IP or DNS
-        SSH_KEY_CREDENTIALS = 'gitsshkey'  // Jenkins SSH credentials ID
+        SSH_KEY_CREDENTIALS = 'SSH-Node'  // Jenkins SSH credentials ID
         REPO_URL = 'https://github.com/jaydeep911/SampleExpressApp.git'  // Your Git repository URL
         APP_DIR = '/home/ubuntu/app'  // Path to deploy the app on EC2
     }
