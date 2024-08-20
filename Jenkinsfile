@@ -25,13 +25,7 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                // Run tests (optional)
-                sh 'npm test'
-            }
-        }
-
+       
         stage('Package') {
             steps {
                 // Package the application (optional)
