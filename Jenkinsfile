@@ -48,7 +48,7 @@ EOF
                         cd ${APP_DIR}
                         # Install dependencies and start the application
                         npm install
-                        nohup npm start &
+                        
                         exit
 EOF
                         """
