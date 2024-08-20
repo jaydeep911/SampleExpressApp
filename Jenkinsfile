@@ -58,10 +58,4 @@ EOF
         }
     }
 
-    post {
-        always {
-            // Clean up workspace
-            // cleanWs()
-        }
-    }
 }
